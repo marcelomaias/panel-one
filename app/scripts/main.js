@@ -24,15 +24,15 @@
 		loader.style.display = 'block';
 
 		const proxy = 'https://cors-anywhere.herokuapp.com/';
-		const url = 'https://api.darksky.net/forecast/35b961fd60784e729b8a15feae5ec24b/-25.4277,-49.2730?lang=pt&units=auto'
+		const url = 'api.openweathermap.org/data/2.5/weather?lat=-25.4277&lon=-49.2730&appid=585de6c217c0301b6dcaecbaf4f69e95&units=metric&lang=pt_br'
 
 		fetch(proxy + url)
 		.then(res => res.json())
 		.then(data => {
 			console.log(data)
-			const temp = Math.floor(data.currently.temperature);
-			const summary = data.currently.summary;
-			const icon = data.currently.icon
+			const temp = Math.floor(data.main.temp);
+			const summary = data.weather[0].description;
+			const icon = data.weather[0].icon
 			let iconImg;
 
 			switch (icon) {
@@ -64,7 +64,7 @@
 					console.log('fog')
 					iconImg = 'wi-fog.svg';
 					break
-				case 'cloudy':
+				case '04n':
 					console.log('cloudy')
 					iconImg = 'wi-cloudy.svg';
 					break
