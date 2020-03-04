@@ -1,5 +1,13 @@
 @import "./remedies";
 
+@font-face {
+  font-family: "fliqlo_sansregular";
+  src: url("../fonts/fliqlosans-webfont.woff2") format("woff2"),
+    url("../fonts/fliqlosans-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -18,30 +26,35 @@ sup {
   font-size: 50%;
 }
 #app {
-  border: 1px dotted orangered;
+  // border: 1px dotted orangered;
   width: 1280px;
   height: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: .75;
+  opacity: 0.65;
 }
 #time {
-  font-size: 350px;
-  font-family: Oswald, -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 500;
+  font-size: 510px;
+  font-family: fliqlo_sansregular, sans-serif;
   margin-bottom: auto;
+  line-height: 1;
+  padding-top: 90px;
+  letter-spacing: 16px;
 }
 #weather {
-  font-family: Oswald, -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 40px;
+  font-family: Oswald, -apple-system, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 50px;
   width: 94%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   .temp {
-    font-size: 100px;
+    font-size: 160px;
+    font-weight: 500;
+    font-family: fliqlo_sansregular, sans-serif;
+    letter-spacing: 10px;
   }
   .summary {
     font-weight: 300;
@@ -59,10 +72,8 @@ sup {
   left: 50%;
   top: 325px;
   transform: translate(-50%, -50%);
+  display: none;
 }
-
-
-
 
 .lds-ring {
   display: inline-block;
