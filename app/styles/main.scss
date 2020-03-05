@@ -7,6 +7,31 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "altebold";
+  src: url("../fonts/altehaasgroteskbold-webfont.woff2") format("woff2"),
+    url("../fonts/altehaasgroteskbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "alte";
+  src: url("../fonts/altehaasgroteskregular-webfont.woff2") format("woff2"),
+    url("../fonts/altehaasgroteskregular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#time {
+  font-family: fliqlo_sansregular, sans-serif;
+}
+#weather {
+  font-family: alte, sans-serif;
+}
+.temp {
+  font-family: fliqlo_sansregular, sans-serif;
+  letter-spacing: 10px;
+}
 
 body {
   display: flex;
@@ -18,7 +43,7 @@ body {
   overflow: hidden;
 }
 img {
-  width: 128px;
+  width: 208px;
   height: auto;
   filter: invert(1);
 }
@@ -33,19 +58,17 @@ sup {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 0.65;
+  opacity: 0.5;
 }
 #time {
   font-size: 510px;
-  font-family: fliqlo_sansregular, sans-serif;
   margin-bottom: auto;
   line-height: 1;
   padding-top: 90px;
   letter-spacing: 16px;
 }
 #weather {
-  font-family: Oswald, -apple-system, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 50px;
+  font-size: 46px;
   width: 94%;
   display: flex;
   align-items: center;
@@ -53,8 +76,6 @@ sup {
   .temp {
     font-size: 160px;
     font-weight: 500;
-    font-family: fliqlo_sansregular, sans-serif;
-    letter-spacing: 10px;
   }
   .summary {
     font-weight: 300;
