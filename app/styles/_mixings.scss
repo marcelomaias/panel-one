@@ -1,0 +1,17 @@
+@mixin helvetica {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  letter-spacing: -14px;
+}
+@mixin alte {
+  font-family: alte, sans-serif;
+}
+@mixin altebold {
+  font-family: "altebold";
+}
+@mixin fliqlo {
+  font-family: fliqlo_sansregular, sans-serif;
+}
+@mixin bebas {
+  font-family: "Bebas Neue", sans-serif;
+}

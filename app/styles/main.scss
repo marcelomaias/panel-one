@@ -1,4 +1,5 @@
 @import "./remedies";
+@import "./mixings";
 
 @font-face {
   font-family: "fliqlo_sansregular";
@@ -23,14 +24,15 @@
 }
 
 #time {
-  font-family: fliqlo_sansregular, sans-serif;
+  @include fliqlo;
+  letter-spacing: 16px;
+}
+.temp {
+  @include fliqlo;
+  letter-spacing: 10px;
 }
 #weather {
   font-family: alte, sans-serif;
-}
-.temp {
-  font-family: fliqlo_sansregular, sans-serif;
-  letter-spacing: 10px;
 }
 
 body {
@@ -65,7 +67,6 @@ sup {
   margin-bottom: auto;
   line-height: 1;
   padding-top: 90px;
-  // letter-spacing: 16px;
 }
 #weather {
   font-size: 46px;
